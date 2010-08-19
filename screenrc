@@ -1,0 +1,25 @@
+escape ^Zz
+
+vbell off
+bell_msg ""
+
+msgminwait 0
+msgwait 1
+
+autodetach on
+
+startup_message off
+
+deflogin off
+
+nethack on
+
+#escape ^\k
+
+caption always "%{wb}%-Lw%{kg}%50L>%n%f* %t%{-}%+Lw%-9= %c:%s%{-}"
+
+defscrollback 1000
+
+# don't kill window after the process died
+zombie "^Dr"
+

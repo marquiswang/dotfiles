@@ -1,0 +1,11 @@
+[user]
+  name = Marquis Wang
+  email = marquis@marquiswang.com
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+[color]
+  diff = auto
+  status = auto
+  branch = auto
