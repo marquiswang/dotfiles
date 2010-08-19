@@ -1,14 +1,14 @@
 ########################################
 # Set up oh-my-zsh
 # Path to your oh-my-zsh configuration.
-export OHMYZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="prose"
 
-if [ -d $OHMYZSH ]; then
-  source $OHMYZSH/oh-my-zsh.sh
+if [ -d $ZSH ]; then
+  source $ZSH/oh-my-zsh.sh
 fi
 ########################################
 
