@@ -34,4 +34,6 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,
 set laststatus=2
 
 imap jj <ESC>
+map tt :NERDTreeToggle<CR>
 
+set runtimepath+=/usr/share/vim/addons
