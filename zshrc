@@ -12,6 +12,8 @@ if [ -d $ZSH ]; then
 fi
 
 ########################################
+export EDITOR=/usr/bin/vim
+########################################
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 
