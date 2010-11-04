@@ -26,6 +26,9 @@ function start_agent {
      /usr/bin/ssh-add;
 }
 
+function upload {
+  scp $1 daedalus.marquiswang.com:/var/www/files
+}
 if [ -f "${SSH_ENV}" ]; then
      source "${SSH_ENV}" > /dev/null
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
