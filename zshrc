@@ -30,6 +30,10 @@ function upload {
   scp $1 daedalus.marquiswang.com:www/files
 }
 
+function download {
+  wget daedalus.marquiswang.com/files/$1
+}
+
 if [ -f "${SSH_ENV}" ]; then
      source "${SSH_ENV}" > /dev/null
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
