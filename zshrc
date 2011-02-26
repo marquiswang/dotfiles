@@ -12,6 +12,8 @@ if [ -d $ZSH ]; then
 fi
 
 ########################################
+export EDITOR=/usr/bin/vim
+########################################
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 
@@ -22,6 +24,14 @@ function start_agent {
      chmod 600 "${SSH_ENV}"
      source "${SSH_ENV}" > /dev/null
      /usr/bin/ssh-add;
+}
+
+function upload {
+  scp $1 daedalus.marquiswang.com:www/files
+}
+
+function download {
+  wget daedalus.marquiswang.com/files/$1
 }
 
 if [ -f "${SSH_ENV}" ]; then

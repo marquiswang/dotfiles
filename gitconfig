@@ -5,7 +5,10 @@
 	st = status
 	co = checkout
 	ci = commit
+  makepatch = diff --no-prefix
 [color]
   diff = auto
   status = auto
   branch = auto
+[core]
+	excludesfile = ~/.gitignore
