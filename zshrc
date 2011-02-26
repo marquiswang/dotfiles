@@ -36,3 +36,7 @@ fi
 ##################################################
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && source ~/.localrc
+
+[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
+    [ -e "$DIR_COLORS" ] || DIR_COLORS=""
+    eval "`dircolors -b $DIR_COLORS`"
