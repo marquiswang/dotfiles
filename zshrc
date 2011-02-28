@@ -13,6 +13,7 @@ fi
 
 ########################################
 export EDITOR=/usr/bin/vim
+export SVN_EDITOR=$EDITOR
 ########################################
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
