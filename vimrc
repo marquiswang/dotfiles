@@ -3,6 +3,9 @@ set nocompatible
 " Make backspace work
 set backspace=indent,eol,start
 
+" Autoindent
+set ai
+
 " Syntax on by default
 syntax on
 
