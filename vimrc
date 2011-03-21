@@ -40,3 +40,7 @@ imap jj <ESC>
 map tt :NERDTreeToggle<CR>
 
 set runtimepath+=/usr/share/vim/addons
+
+" Do not expand tabs for Makefiles
+autocmd FileType make set noexpandtab
+
