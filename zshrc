@@ -44,6 +44,9 @@ else
      start_agent;
 fi 
 
+complete_users=()
+zstyle ':completion:*' users $complete_users
+
 ##################################################
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && source ~/.localrc
