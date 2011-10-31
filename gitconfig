@@ -1,14 +1,22 @@
 [user]
-  name = Marquis Wang
-  email = marquis@marquiswang.com
+    name = Marquis Wang
+    email = Marquis.Wang@imc-chicago.com
 [alias]
-	st = status
-	co = checkout
-	ci = commit
-  makepatch = diff --no-prefix
+    st = status
+    co = checkout
+    ci = commit
+    makepatch = diff --no-prefix
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit 
+    sn = show --name-status
+    dn = diff --name-status
+    l = log --decorate
+    d = diff --word-diff=color
+    s = show --word-diff=color
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+    diff = auto
+    onlyus = auto
+    branch = auto
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
+[push]
+    default = tracking
