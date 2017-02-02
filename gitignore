@@ -1,1 +1,12 @@
 .*.swp
+.idea
+Registry.conf
+Registry.conf.*
+*.o
+nuweb
+nuweb.*
+atlassian-ide-plugin.xml
+*/*.iml
+.idea
+I:*
+*.pyc
