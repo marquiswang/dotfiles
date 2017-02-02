@@ -23,3 +23,4 @@ defscrollback 1000
 # don't kill window after the process died
 zombie "^Dr"
 
+shell "/bin/zsh"
