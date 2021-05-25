@@ -18,36 +18,29 @@ export SVN_EDITOR=$EDITOR
 # Start SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 
-function start_agent {
-     echo "Initialising new SSH agent..."
-     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-     echo Succeeded
-     chmod 600 "${SSH_ENV}"
-     source "${SSH_ENV}" > /dev/null
-     /usr/bin/ssh-add;
-}
-
-function upload {
-  scp $1 daedalus.marquiswang.com:www/files
-}
-
-function download {
-  wget daedalus.marquiswang.com/files/$1
-}
-
-if [ -f "${SSH_ENV}" ]; then
-     source "${SSH_ENV}" > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-         start_agent;
-     }
-else
-     start_agent;
-fi 
-
 complete_users=()
 zstyle ':completion:*' users $complete_users
+
+alias z="source ~/.zshrc"
+
+[ -s "/Users/mwang/.scm_breeze/scm_breeze.sh" ] && source "/Users/mwang/.scm_breeze/scm_breeze.sh"
 
 ##################################################
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && source ~/.localrc
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  ~/bin/notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+
+# Generate J Aliases
+if [[ -f ~/generate_j_aliases.sh ]]; then
+    . ~/generate_j_aliases.sh
+fi
 
