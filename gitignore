@@ -1,6 +1,5 @@
 .*.swp
 .idea
-Registry.conf
 Registry.conf.*
 *.o
 nuweb
