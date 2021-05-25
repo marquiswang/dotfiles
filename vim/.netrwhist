@@ -1,7 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/mwang/.dotfiles/vim'
-let g:netrw_dirhist_2='/home/mwang/gitosis-admin'
-let g:netrw_dirhist_3='/home/mwang/Clinic/hive/ql/src/java/org/apache/hadoop/hive/ql'
-let g:netrw_dirhist_4='/home/mwang/gitosis-admin'
-let g:netrw_dirhist_5='/home/mwang/Clinic/github-hive/ql/src/java/org/apache/hadoop/hive/ql/parse'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/private/tmp/test'
+let g:netrw_dirhist_2='/Users/mwang/code/recruitment/exchange/client'
+let g:netrw_dirhist_3='/Users/mwang/code/recruitment/gitolite-admin/conf'

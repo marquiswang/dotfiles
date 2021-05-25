@@ -1,10 +1,13 @@
 set nocompatible
 
+filetype plugin indent on
+filetype on
+
 " Make backspace work
 set backspace=indent,eol,start
 
 " Autoindent
-set ai
+" set ai
 
 " Syntax on by default
 syntax on
@@ -13,8 +16,8 @@ syntax on
 set number
 
 " Soft tabs, 4 spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " Move lines up and down
@@ -40,6 +43,8 @@ imap jj <ESC>
 map tt :NERDTreeToggle<CR>
 
 set runtimepath+=/usr/share/vim/addons
+
+colors koehler
 
 " Do not expand tabs for Makefiles
 autocmd FileType make set noexpandtab
