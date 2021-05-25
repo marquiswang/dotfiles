@@ -5,10 +5,10 @@ function git_prompt_info() {
 }
 
 parse_git_dirty () {
-  if [[ $((git status 2> /dev/null) | tail -n1) != 'nothing to commit, working tree clean' ]]; then
-    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
-  else
+  if /usr/bin/git diff --quiet; then
     echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
   fi
 }
 
